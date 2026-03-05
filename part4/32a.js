@@ -24,7 +24,7 @@ let customers = [
 // -Add amount to balance
 // -Add transaction record
 
-function withdraw(id, amount){
+export function withdraw(id, amount){
 // -Check if sufficient balance
 // -Deduct amount
 // -Add transaction
@@ -56,9 +56,9 @@ customers = customers.map((customer) => {
 // checkBalance(id)
 // -Return current balance
 
-function showTransactions(id) {
+export function showTransactions(id) {
   const customer = customers.find((customer) => customer.id === id);
-  console.log(customer.transactions);
+  console.table(customer.transactions);
 }
 
 //Part 3 - Each transaction must look like:
@@ -87,12 +87,12 @@ function showTransactions(id) {
 //   },
 // ];
 
-function checkBalance(id) {
+export function checkBalance(id) {
   const customer = customers.find((customer) => customer.id === id);
-  console.log(customer);
+  console.table(customer);
 }
 
-function deposit(id, amount) {
+export function deposit(id, amount) {
   customers = customers.map((customer) => {
     if (customer.id === id) {
       return {
@@ -112,9 +112,3 @@ function deposit(id, amount) {
     }
   });
 }
-deposit(1, 1500);
-checkBalance(1)
-deposit(1, 1000);
-checkBalance(1);
-showTransactions(1);
-withdraw(1, 10000);

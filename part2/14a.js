@@ -1,7 +1,7 @@
 const Sp=[
-    {name:"Wipro",lp=200,cp:210},
-    {name:"Wipro",lp=250,cp:270},
-    {name:"Wipro",lp=200,cp:290},
+    {name:"Wipro",lp:200,cp:210},
+    {name:"Wipro",lp:250,cp:270},
+    {name:"Wipro",lp:200,cp:290},
 ]
 function bs(comp) {
     temp=[];
