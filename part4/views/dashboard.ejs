@@ -6,8 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Dashboard</h1>
-    <p>Welcome, <%= username %>!</p>
-    <a>Logout</a>
+    <h1>Dashboard | <a href="/login">Login</a></h1>
+    <ol>
+    <% users.forEach(user => { %>
+    <li><%= user.name %> - <%= user.email %> - <%= user.password %></li>
+<% }) %>
+
+        </ol>
 </body>
 </html>
