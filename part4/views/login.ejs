@@ -8,10 +8,13 @@
 <body>
     <div class="login-container">
         <h1>Login Form</h1>
+        <% if(typeof error !== 'undefined') { %>
+            <p style="color: red;"><%= error %></p>
+        <% } %>
         <form action="/login" method="POST">
             <div>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
             </div>
             <br>
             <br>
@@ -21,9 +24,9 @@
             </div>
             <br>
             <br>
-            <div style="text-align: center; margin-top: 20px;">
                 <button type="submit">Login</button>
-            </div>
+
     </div>
+    <p>new user? then got this fking page <a href="/register">Register</a></p>
 </body>
 </html>
